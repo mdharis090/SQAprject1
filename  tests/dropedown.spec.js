@@ -9,5 +9,5 @@ test('verify Drope Down Functionality',async({page})=>{
     expect(await page.locator('#dropdown').inputValue()).toBe('1');
     await page.selectOption('#dropdown','2');
     expect(await page.locator('#dropdown').inputValue()).toBe('2');
-
+    await page.waitForTimeout(5000);
 })
